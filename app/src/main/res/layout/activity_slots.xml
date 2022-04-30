@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="horizontal">
+
+    <TableLayout
+        android:id="@+id/tableLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+    </TableLayout>
+
+    <TextView
+        android:id="@+id/coinsTv"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="50dp"
+
+        android:layout_marginTop="50dp"
+        android:layout_marginEnd="32dp"
+        android:textSize="32dp"
+
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/tableLayout"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="Coins: " />
+
+
+    <Button
+        android:id="@+id/menuBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:text="Menu"
+        app:layout_constraintBottom_toBottomOf="@+id/betBtn"
+        app:layout_constraintEnd_toEndOf="@+id/spinBtn"
+        app:layout_constraintStart_toEndOf="@+id/betBtn"
+        app:layout_constraintTop_toTopOf="@+id/betBtn" />
+
+
+    <Button
+        android:id="@+id/betBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="32dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/menuBtn"
+        app:layout_constraintHorizontal_chainStyle="spread_inside"
+        app:layout_constraintStart_toStartOf="@+id/spinBtn"
+        app:layout_constraintTop_toBottomOf="@+id/spinBtn"
+        tools:text="Bet" />
+
+    <Button
+        android:id="@+id/spinBtn"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="Spin"
+        app:layout_constraintEnd_toEndOf="@+id/coinsTv"
+        app:layout_constraintStart_toStartOf="@+id/coinsTv"
+        app:layout_constraintTop_toBottomOf="@+id/coinsTv" />
+</androidx.constraintlayout.widget.ConstraintLayout>
