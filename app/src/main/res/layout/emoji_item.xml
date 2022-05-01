@@ -5,14 +5,38 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content">
 
-    <TextView
-        android:id="@+id/textView"
-        android:layout_width="50dp"
-        android:layout_height="50dp"
-        android:gravity="center"
-        android:text="TextView"
-        android:textSize="32dp"
-        app:layout_constraintEnd_toEndOf="parent"
+    <ImageView
+        android:id="@+id/img1"
         app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/textView"
+        app:layout_constraintBottom_toBottomOf="@id/textView"
+        android:layout_width="2dp"
+        android:background="@color/primary_dark"
+        app:layout_constraintEnd_toStartOf="@id/textView"
+        android:layout_height="0dp"
+        tools:ignore="ContentDescription" />
+
+    <TextView
+        android:textColor="@color/primary"
+        android:id="@+id/textView"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:gravity="center"
+        android:text="@string/item_value"
+        android:textSize="64sp"
+
+
+        app:layout_constraintEnd_toStartOf="@id/img2"
+        app:layout_constraintStart_toEndOf="@id/img1"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/img2"
+        android:background="@color/primary_dark"
+        app:layout_constraintTop_toTopOf="@id/textView"
+        app:layout_constraintBottom_toBottomOf="@id/textView"
+        android:layout_width="2dp"
+        app:layout_constraintStart_toEndOf="@id/textView"
+        android:layout_height="0dp"
+        tools:ignore="ContentDescription" />
 </androidx.constraintlayout.widget.ConstraintLayout>

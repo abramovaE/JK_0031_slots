@@ -5,25 +5,66 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:orientation="horizontal">
+    android:orientation="horizontal"
+    android:background="@color/primary_light">
 
 
+    <ImageView
+        android:id="@+id/img1"
+        android:layout_width="0dp"
+        android:layout_height="4dp"
+        android:background="@color/primary_dark"
+        app:layout_constraintBottom_toTopOf="@id/rv"
+        app:layout_constraintEnd_toEndOf="@id/rv"
+        app:layout_constraintStart_toStartOf="@id/rv"
+        tools:ignore="ContentDescription" />
+
+    <ImageView
+        android:id="@+id/img_s"
+        android:layout_width="4dp"
+        android:layout_height="0dp"
+        android:background="@color/primary_dark"
+        app:layout_constraintTop_toTopOf="@id/img1"
+        app:layout_constraintBottom_toBottomOf="@id/img2"
+        app:layout_constraintEnd_toStartOf="@id/rv"
+        tools:ignore="ContentDescription" />
+
+    <ImageView
+        android:id="@+id/img_l"
+        android:layout_width="4dp"
+        android:layout_height="0dp"
+        android:background="@color/primary_dark"
+        app:layout_constraintTop_toTopOf="@id/img1"
+        app:layout_constraintBottom_toBottomOf="@id/img2"
+        app:layout_constraintStart_toEndOf="@id/rv"
+        tools:ignore="ContentDescription" />
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/rv"
-        android:layout_width="wrap_content"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="32dp"
-        app:spanCount="3"
         app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"/>
+        app:layout_constraintTop_toTopOf="parent"
+        app:spanCount="3"
+        android:background="@color/icons"
+        tools:itemCount="9"
+        tools:layout_height="300dp"
+        tools:layout_width="300dp"
+        tools:listitem="@layout/emoji_item" />
 
 
-
-
-
+    <ImageView
+        android:id="@+id/img2"
+        android:layout_width="0dp"
+        android:layout_height="4dp"
+        android:background="@color/primary_dark"
+        app:layout_constraintEnd_toEndOf="@id/rv"
+        app:layout_constraintStart_toStartOf="@id/rv"
+        app:layout_constraintTop_toBottomOf="@id/rv"
+        tools:ignore="ContentDescription" />
 
     <TextView
         android:id="@+id/coinsTv"
@@ -33,46 +74,61 @@
 
         android:layout_marginTop="50dp"
         android:layout_marginEnd="32dp"
-        android:textSize="32dp"
+        android:gravity="center"
 
+        android:textColor="@color/primary_text"
+        android:textSize="32sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@id/rv"
         app:layout_constraintTop_toTopOf="parent"
         tools:text="Coins: " />
 
 
-    <Button
+    <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/menuBtn"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
         android:layout_marginStart="24dp"
-        android:text="Menu"
+        android:layout_marginEnd="16dp"
+        android:background="@drawable/circle_btn"
+        android:stateListAnimator="@null"
+        android:text="@string/menu"
+
         app:layout_constraintBottom_toBottomOf="@+id/betBtn"
         app:layout_constraintEnd_toEndOf="@+id/spinBtn"
+        app:layout_constraintHorizontal_chainStyle="packed"
         app:layout_constraintStart_toEndOf="@+id/betBtn"
         app:layout_constraintTop_toTopOf="@+id/betBtn" />
 
 
-    <Button
+    <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/betBtn"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
         android:layout_marginBottom="32dp"
+        android:background="@drawable/circle_btn"
+
+        android:stateListAnimator="@null"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@id/menuBtn"
-        app:layout_constraintHorizontal_chainStyle="spread_inside"
+        app:layout_constraintHorizontal_chainStyle="packed"
         app:layout_constraintStart_toStartOf="@+id/spinBtn"
-        app:layout_constraintTop_toBottomOf="@+id/spinBtn"
         tools:text="Bet" />
 
-    <Button
+    <ImageButton
         android:id="@+id/spinBtn"
         android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
-        android:text="Spin"
+        android:layout_height="100dp"
+        android:layout_marginTop="16dp"
+        android:background="@color/primary_light"
+        android:scaleType="fitCenter"
+        android:src="@drawable/spin"
+        android:stateListAnimator="@null"
+        android:text="@string/spin"
         app:layout_constraintEnd_toEndOf="@+id/coinsTv"
         app:layout_constraintStart_toStartOf="@+id/coinsTv"
-        app:layout_constraintTop_toBottomOf="@+id/coinsTv" />
+        app:layout_constraintTop_toBottomOf="@+id/coinsTv"
+        tools:ignore="ContentDescription" />
 </androidx.constraintlayout.widget.ConstraintLayout>
