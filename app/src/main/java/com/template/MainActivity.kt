@@ -28,7 +28,7 @@ class MainActivity : AppCompatActivity() {
         setCoinsText()
 
         binding.playBtn.setOnClickListener {
-            if(initCoins == 0) {
+            if(initCoins <= 0) {
                 val someCoins = (0..100).random()
                 AlertDialog.Builder(this)
                     .setMessage("You reward $someCoins coins")

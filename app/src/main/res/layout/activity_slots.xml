@@ -74,8 +74,9 @@
 
         android:layout_marginTop="50dp"
         android:layout_marginEnd="32dp"
-        android:gravity="center"
+        android:fontFamily="@font/aclonica"
 
+        android:gravity="center"
         android:textColor="@color/primary_text"
         android:textSize="32sp"
         app:layout_constraintEnd_toEndOf="parent"
@@ -91,9 +92,10 @@
         android:layout_marginStart="24dp"
         android:layout_marginEnd="16dp"
         android:background="@drawable/circle_btn"
+        android:fontFamily="@font/aclonica"
         android:stateListAnimator="@null"
-        android:text="@string/menu"
 
+        android:text="@string/menu"
         app:layout_constraintBottom_toBottomOf="@+id/betBtn"
         app:layout_constraintEnd_toEndOf="@+id/spinBtn"
         app:layout_constraintHorizontal_chainStyle="packed"
@@ -110,6 +112,7 @@
         android:layout_marginBottom="32dp"
         android:background="@drawable/circle_btn"
 
+        android:fontFamily="@font/aclonica"
         android:stateListAnimator="@null"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@id/menuBtn"
